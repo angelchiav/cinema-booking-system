@@ -16,8 +16,8 @@ class Booking(models.Model):
     )
 
     movie_schedule = models.ForeignKey(
-        'Movie Schedule', 
-        on_delete=models.CASCADE, 
+        'movies.MovieSchedule',
+        on_delete=models.CASCADE,
         related_name='bookings'
     )
 
@@ -76,8 +76,8 @@ class SeatReservation(models.Model):
     )
 
     movie_schedule = models.ForeignKey(
-        'Movie Schedule', 
-        on_delete=models.CASCADE, 
+        'movies.MovieSchedule',
+        on_delete=models.CASCADE,
         related_name='seat_reservations'
     )
     seat_number = models.CharField(

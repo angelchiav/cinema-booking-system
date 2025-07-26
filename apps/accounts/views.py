@@ -12,7 +12,6 @@ from .serializers import (
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-# Import for booking history and active seat reservations actions
 from apps.bookings.models import Booking, SeatReservation
 from apps.bookings.serializers import BookingSerializer, SeatReservationSerializer
 from django.utils import timezone

@@ -13,9 +13,13 @@ ALLOWED_HOSTS = []
 
 # Custom User Model
 
-#AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 # Application definition
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -24,7 +28,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
+    'drf_spectacular',
+    'apps.accounts',
+    'apps.bookings',
+    'apps.movies'
 ]
 
 MIDDLEWARE = [
