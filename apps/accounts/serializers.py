@@ -441,5 +441,3 @@ class UserDeactivationSerializer(serializers.Serializer):
         if not user.check_password(value):
             raise serializers.ValidationError("Password is incorrect.")
         return value
-
-    
